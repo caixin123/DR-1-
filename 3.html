@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.quanbu{
+				width: 100%;
+				height: 100%;
+				background-color: #fee6e6;
+			}
+			body{
+				width: 100%;
+				background-color: fee6e6;
+			}
+			header{
+				width: 1200px;
+				height: 120px;
+				margin: 0 auto;
+				position: relative;
+			}
+			.loge{
+				width: 100px;
+				height: 80px;
+				position: absolute;
+				left: 100px;
+				float: left;
+				top: 20px;
+				
+			}
+			.loge img{
+				margin-left: 20px;
+				width: 60px;
+				height: 60px;
+				cursor: pointer;
+			}
+			.loge p{
+				text-align: center;
+				font-size: 9px;
+				color: #cac1b8;
+			}
+			
+			nva{
+				margin-top: 60px;
+				float: right;
+				width: 600px;
+				height: 30px;
+				font-size: 14px;
+			}
+			nva ul li{
+				list-style: none;
+				float: left;
+				margin: 0 25px;
+				cursor: pointer;
+				font-weight: 900;
+			}
+			nva ul li a{
+				text-decoration: none;
+				color: #ae2c2c;
+			}
+			nva ul li a:hover{
+				color: #fb5d92;
+			}
+			.search{
+				position: absolute;
+				width: 200px;
+				height: 30px;
+				left: 730px;
+				top: 20px;
+			}
+			.search input{
+				outline: none;
+				border: #b16464 1px solid;
+				-moz-border-radius:6px;
+				-ms-border-radius:6px;
+				-o-border-radius:6px;
+				-webkit-border-radius:6px;
+				border-radius:6px!important;
+			}
+			.search input::-webkit-input-placeholder {
+				color: #b16464;
+				opacity: 1;
+			}
+			/* darry ring */
+			.section1{
+				width: 1000px;
+				height: 397px;
+				margin: 0 auto;
+				background-image: url(img/4tu.gif);
+			}
+			.section1_right{
+				width: 180px;
+				height: 150px;
+				float: right;
+				margin-right: 150px;
+				margin-top: 180px;
+				font-size: 18px;
+			}
+			.section1_right p{
+				width: 30px;
+				height: 40px;
+				border-bottom: 3px solid #453431;
+				margin-left: 60px;
+			}
+			/* DR / 钻石定制 */
+			.section2{
+				width: 800px;
+				height: 500px;
+				margin: 0 auto;
+			}
+			.DR{
+				margin: 30px 0;
+				width: 200px;
+				height: 25px;
+				font-size: 13px;
+				color: #fb77a1;
+				border-bottom: 2px solid #ae2c2c;
+			}
+			.DR i{
+				font-style: normal;
+				color: #ae2c2c;
+			}
+			.customize{
+				width: 800px;
+				height: 400px;
+				background-color: #fdefef;
+			}
+			.customize_top{
+				width: 200px;
+				height: 70px;
+				margin: 0 auto;
+				text-align: center;
+				color: #ae2c2c;
+				font-size: 14px;
+				padding-top: 40px;
+			}
+			.customize_top p{
+				width: 30px;
+				height: 30px;
+				border-bottom: 2px solid #ae2c2c;
+				margin-left: 90px;
+			}
+			.customize ul{
+				width: 700px;
+				height: 300px;
+				margin: 0 auto;
+				display: flex;
+			}
+			.customize ul li{
+				width: 200px;
+				height: 250px;
+				background-color: #fccdcd;
+				list-style: none;
+				text-align: center;
+				margin: 10px 16px;
+			}
+			.customize1{
+				width: 80px;
+				height: 60px;
+				padding-top: 10px;
+				cursor: pointer;
+			}
+			.customize2{
+				width: 80px;
+				height: 90px;
+				cursor: pointer;
+			}
+			.customize3{
+				width: 80px;
+				height: 100px;
+				cursor: pointer;
+				
+			}
+			.customize_bottom p:nth-of-type(1){
+				font-size: 13px;
+				color: #d57a47;
+				padding-top: 40px;
+			}
+			.customize_bottom p:nth-of-type(2){
+				font-size: 13px;
+				color: #ae2c2c;
+				padding: 5px 0 40px 0;
+			}
+			/* Step1  根据手型挑选心动款式，开启你们的浪漫故事 */
+			.step1{
+				width: 100%;
+				height: 60px;
+				background-color: #feb8b8;
+			}
+			.step1 p{
+				width: 1000px;
+				height: 60px;
+				line-height: 60px;
+				margin: 0 auto;
+				color: #ae2c2c;
+				font-size: 14px;
+				
+			}
+			.step1 p span{
+				font-size: 30px;
+				font-family: "CommercialScript BT";
+			}
+			.section3{
+				width: 800px;
+				height: 550px;
+				margin: 0 auto;
+				background-color: #fdefef;
+				margin-top: 50px;
+				position: relative;
+			}
+			.section3_left{
+				width: 350px;
+				height: 500px;
+			}
+			
+			#claw1 img{
+				width: 180px;
+				height: 380px;
+				position: absolute;
+				margin-left: 50px;
+				margin-top: 40px;
+				
+			}
+			#claw1 span{
+				position: absolute;
+				top: 360px;
+				left: 210px;
+				font-size: 12px;
+				text-align: center;
+				color: #AE2C2C;
+				
+			}
+			#claw2 img{
+				position: absolute;
+				width: 195px;
+				height: 377px;
+				top: 43px;
+				left: 45px;
+				
+			}
+			#claw2 span{
+				position: absolute;
+				top: 360px;
+				left: 210px;
+				font-size: 12px;
+				text-align: center;
+				color: #AE2C2C;
+				
+			}
+			#claw li{
+				list-style: none;
+				display: none;
+			}
+			.ab{
+				display: block!important;
+			}
+			
+			button{
+				position: absolute;
+				top: 440px;
+				left: 140px;
+				display: flex;
+				color: #AE2C2C;
+				font-size: 14px;
+				padding: 5px 10px;
+				border: 1px solid #fe8a8a;
+				cursor: pointer;
+				background-color: white;
+				outline:none;
+			}
+			.active{
+				background-color:#fe8a8a;
+			}
+			
+			button:nth-of-type(1){
+				left: 76px;
+			}
+			.section3_right{
+				width: 400px;
+				height: 400px;
+				float: right;
+				margin-top: -400px;
+			}
+			.section3_right_top img{
+				width: 160px;
+				height: 160px;
+				background-color: white;
+				margin: 10px;
+				cursor: pointer;
+				border: white 1px solid;
+			}
+			.section3_right_top img:hover{
+				border: #AE2C2C 1px solid;
+			}
+			
+			.section3_right_top ul li{
+				list-style: none;
+				position: absolute;
+				display: none;
+			}
+			.act{
+				display: block!important;
+			}
+			
+			.qiehuan{
+				display: flex;
+				list-style: none;
+				margin-left: 140px;
+				margin-top: 400px;
+			}
+			.qiehuan li{
+				width: 15px;
+				height: 15px;
+				border: 1px solid #CAC1B8;
+				border-radius: 50%;
+				margin-right: 20px;
+			}
+			.dian{
+				background-color: #CAC1B8;
+			}
+			.jiezhi{
+				position: relative;
+				top: 161px;
+				left: 74px;
+			}
+			.jiezhi img{
+				width: 48px;
+				height: 45px;
+				position: absolute;
+				display: none;
+			}
+			.jiezhi1{
+				display: block!important;
+			}
+			/* 奢侈款 */
+			.section4{
+				width: 800px;
+				height: 470px;
+				margin: 0 auto;
+				padding-top: 60px;
+				position: relative;
+				display: flex;
+			}
+			.section4 img{
+				width: 267px;
+				height: 400px;
+			}
+			.heart{
+				position: absolute;
+				top: 360px;
+				left: 65px;
+				font-size: 14px;
+				color: #e5c1af;
+			}
+			.line{
+				position: absolute;
+				top: 380px;
+				left: 55px;
+				font-size: 12px;
+				color: #c66262;
+			}
+			.heng{
+				width: 30px;
+				height: 20px;
+				border-bottom: #AE2C2C solid 2px;
+				position: absolute;
+				margin-left: 120px;
+				margin-top: -74px;
+			}
+			/* 匠心打造，专注真爱 */
+			.section5{
+				width: 800px;
+				height: 1150px;
+				margin: 0 auto;
+				text-align: center;
+			}
+			.section5 div{
+				margin-bottom: 6px;
+			}
+			.ingen{
+				width: 380px;
+				height: 50px;
+				margin-bottom: 20px;
+			}
+			
+			.jiangxin{
+				width: 600px;
+				height: 160px;
+				
+			}
+			.zhenxuan{
+				width: 190px;
+				height: 160px;
+			}
+			.ST{
+				width: 800px;
+				height: 170px;
+				background-color: #d1c0a5;
+				color: #423f3b;
+				font-size: 14px;
+			}
+			.ST p{
+				width: 400px;
+				height: 20px;
+				margin: 0 auto;
+				font-size: 13px;
+				color: #453431;
+				padding-bottom: 7px;
+			}
+			.ST p:nth-of-type(1){
+				padding-top: 30px;
+			}
+			.gia{
+				margin-top: 40px;
+				margin-bottom: 40px;
+				width: 800px;
+				height: 150px;
+				background-color: #feb8b8;
+				border-radius: 5%;
+			}
+			.gia ul{
+				display: flex;
+				list-style: none;
+			}
+			.gia img{
+				width: 70px;
+				height: 85px;
+				margin-top: 30px;
+				margin-left: 27px;
+			}
+			.guanzhu{
+				width: 800px;
+				height: 180px;
+				color: #787070;
+			}
+			.us{
+				font-size: 18px;
+				padding-bottom: 20px;
+			}
+			.weixin{
+				margin-top: 20px;
+			}
+			.weixin img{
+				width: 40px;
+				height: 40px;
+				padding: 0 10px ;
+			}
+			/* 结尾 */
+			footer{
+				width: 100%;
+				height: 150px;
+				background-color: #fe8a8a;
+				
+				font-size: 13px;
+			}
+			.foot{
+				width: 900px;
+				height: 150px;
+				margin: 0 auto;
+			}
+			.foot_left{
+				width: 400px;
+				height: 15px;
+				float: left;
+			}
+			.foot_left ul li{
+				line-height: 150px;
+				list-style: none;
+				float: left;
+				margin-left: 25px;
+				
+			}
+			.foot_right{
+				
+				width: 400px;
+				height: 150px;
+				float: right;
+				text-align: center;
+			}
+			.foot_right p:nth-of-type(1){
+				margin-top: 50px;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<div class="quanbu">
+			<!-- 头部 -->
+			<header id="header">
+
+			</header>
+			<!-- darry ring -->
+			<section class="section1">
+				<div class="section1_right">
+					浪漫钻戒 为爱定制
+					<p></p>
+				</div>
+			</section>
+			
+			<!-- DR / 钻石定制 -->
+			<section class="section2">
+				<p class="DR"><i>DR / </i> 钻石定制</p>
+				<div class="customize">
+					<div class="customize_top">
+						DR定制三部曲
+						<p></p>
+					</div>
+					<ul>
+						<li class="customize_bottom">
+							<p>STEP 01</p>
+							<p>挑选款式</p>
+							<img class="customize1" src="img/4ziuanshi.gif" />
+						</li>
+						<li class="customize_bottom">
+							<p>STEP 02</p>
+							<p>挑选钻石</p>
+							<img class="customize2" src="img/4zuanshi2.gif" />
+						</li>
+						<li class="customize_bottom">
+							<p>STEP 03</p>
+							<p>浪漫定制</p>
+							<img class="customize3" src="img/4jiezhi3.gif" />
+						</li>
+					</ul>
+				</div>
+			</section>
+			
+			<!-- Step1  根据手型挑选心动款式，开启你们的浪漫故事 -->
+			<div class="step1">
+				<p><span>Step1</span> &nbsp;&nbsp;&nbsp; &nbsp;根据手型挑选心动款式，开启你们的浪漫故事</p>
+			</div>
+			<section class="section3">
+				<div class="section3_left">
+					<ul id="claw" class="claw">
+						<li class="ab" id="claw1">
+							<img src="img/hand-full.png" />
+							<span>手型参考图：12号手寸<br>手指直径约16.1mm<br>参考戒指钻重30分</span>
+						</li>
+						<li  id="claw2">
+							<img src="img/hand-slim.png" />
+							<span>手型参考图：16号手寸<br>手指直径约17.6mm<br>参考戒指钻重30分</span>
+						</li>
+					</ul>
+					<div class="jiezhi">
+						<img class="jiezhi1" src="img/believe-f.png" />
+						<img src="img/justyou-jd.png" />
+						<img src="img/forever-jd.png" />
+						<img src="img/truelove-js.png" />
+						<img src="img/forever-sh.png" />
+						<img src="img/iswear-sh.png" />
+						<img src="img/loveline-sh.png" />
+						<img src="img/lockforever.png" />
+						<img src="img/sweety.png" />
+						<img src="img/justyou-lm.png" />
+						<img src="img/iswear-jd.png" />
+						<img src="img/forever-js.png" />
+					</div>
+					<button class="active">修长型</button>
+					<button>圆润性</button>
+					
+				</div>
+				<div class="section3_right">
+					<div class="section3_right_top">
+						<ul>
+							<li class="act">
+								<img class="band1" src="img/believe-big.png" />
+								<img src="img/justyou-big.png" />
+								<img src="img/forver-big.png" />
+								<img src="img/truelove-big.png" />
+							</li>
+							<li>
+								<img src="img/forver2-big.png" />
+								<img src="img/iswear-big.png" />
+								<img src="img/loveline-big.png" />
+								<img src="img/lockme-big.png" />
+							</li>
+							<li>
+								<img src="img/sweety-big.png" />
+								<img src="img/justyou2-big.png" />
+								<img src="img/iswear2-big.png" />
+								<img src="img/forver3-big.png" />
+							</li>
+						</ul>
+						
+						
+					</div>
+					<ul class="qiehuan">
+						<li class="dian"></li>
+						<li></li>
+						<li></li>
+						
+					</ul>
+				</div>
+			</section>
+			
+			<!-- 奢侈款 -->
+			<section class="section4">
+				<div class="section4-left">
+					<img src="img/ggw1.gif" />
+					<p class="heart">MY HEART系列 简奢款</p>
+					<p class="line">把心交给你是我浪漫一生的开始</p>
+					<p class="heng"></p>
+				</div>
+				<div class="section4-center">
+					<img src="img/ggw2.gif" />
+					<p class="heart" style="left: 326px;">FOREVER系列 轻奢款</p>
+					<p class="line" style="left: 347px;">一生挚爱 永恒不变</p>
+					<p class="heng"></p>
+				</div>
+				<div class="section4-right">
+					<img src="img/ggw3.gif" />
+					<p class="heart" style="left: 605px;">LOVE LINE系列 简奢款</p>
+					<p class="line" style="left: 625px;">与你绑定一生的幸福</p>
+					<p class="heng" style="left: 550px;"></p>
+				</div>
+			</section>
+			<!-- 匠心打造，专注真爱 -->
+			<section class="section5">
+				<img class="ingen" src="img/4log.gif" >
+				<div class="section5_one">
+					<img class="jiangxin" src="img/jiangxin1.gif" />
+					<img class="zhenxuan" src="img/zhenxuan1.gif" />
+				</div>
+				<div class="section5_two">
+					<img class="zhenxuan" src="img/zhenxuan2.gif" />
+					<img class="jiangxin" src="img/jiangxin2.gif" />
+				</div>
+				<div class="section5_three">
+					<img class="jiangxin" src="img/jiangxin3.gif" />
+					<img class="zhenxuan" src="img/zhenxuan3.gif" />
+				</div>
+				<div class="ST">
+					<p>DR悉心甄选每颗钻石</p>
+					<p>只选用SI1及以上的优质净度，J及以上璀璨色级</p>
+					<p>切工更是高达3VG以上</p>
+					<p>确保每一颗钻石都光彩夺目，熠熠生辉</p>
+				</div>
+				<div class="gia">
+					<ul>
+						<li><img src="img/gia1.gif"></li>
+						<li><img src="img/gia2.gif"></li>
+						<li><img src="img/gia3.gif"></li>
+						<li><img src="img/gia4.gif"></li>
+						<li><img src="img/gia5.gif"></li>
+						<li><img src="img/gia6.gif"></li>
+						<li><img src="img/gia7.gif"></li>
+						<li><img src="img/gia8.gif"></li>
+					</ul>
+				</div>
+				<div class="guanzhu">
+					<p class="us">关注我们</p>
+					<p>一个让你相信真爱的地方，给你实用的情感指南，为你的爱情终身服务。</p>
+					<div class="weixin">
+						<img src="img/weixin.gif"/>
+						<img src="img/weibo.gif" />
+					</div>
+					
+				</div>
+			</section>
+			<!-- 结尾 -->
+			<footer id="footer">
+
+				
+			</footer>
+		</div>
+		
+	</body>
+	<script>
+        let oHeader=document.getElementById('header');
+        let oFooter=document.getElementById('footer');
+		 var obox=document.getElementsByClassName("section3_right_top")[0];
+		  var abc=obox.getElementsByTagName("li");
+		  var qiehuan=document.getElementsByClassName("qiehuan")[0];
+		 var arrLi=qiehuan.getElementsByTagName("li");
+		 
+		 for(var k=0;k<arrLi.length;k++){
+		 	arrLi[k].index=k
+		 	arrLi[k].onclick=function(){    		
+		 		for (var r=0;r<abc.length;r++){
+		 			abc[r].className=""
+		 			arrLi[r].className=""
+		 		}
+				this.className="dian"
+		 		abc[this.index].className="act";
+
+		     }
+		 }
+		 
+		var aButton = document.getElementsByTagName('button');
+		 var abcd=document.getElementsByClassName("claw")[0];
+		var aLi = abcd.getElementsByTagName("li");
+
+		for (var i = 0; i < aButton.length; i++) {
+			aButton[i].index=i;
+			aButton[i].onclick = function () {
+				for (var j = 0; j < aButton.length; j++) {
+					aButton[j].className = '';
+					aLi[j].className = '';
+				}
+				this.className = 'active';
+				aLi[this.index].className = 'ab';
+			}
+		}
+	
+	
+		var Band=obox.getElementsByTagName("img");
+		var jiezhi=document.getElementsByClassName("jiezhi")[0].getElementsByTagName("img");
+		for(var z=0;z<Band.length;z++){
+			Band[z].index=z;
+			Band[z].onclick=function(){    		
+				for (var r=0;r<jiezhi.length;r++){
+					jiezhi[r].className=""
+					Band[r].className=""
+				}
+				this.className="band1"
+				jiezhi[this.index].className="jiezhi1";
+		    }
+		}
+	</script>
+	<script src="js/ajax.js"></script>
+	<script>
+        ajax('get','header.html','',(data)=>{
+            oHeader.innerHTML=data;
+        })
+        setTimeout(()=>{
+            ajax('get','footer.html','',(data)=>{
+                oFooter.innerHTML=data;
+            })
+        },5)
+
+        ajax('get','header.html','',(data)=>{
+            oHeader.innerHTML=data;
+            let navArr=document.getElementsByTagName('nav')[0].getElementsByTagName('li');
+            // console.log(navArr);
+            let id=window.location.search.substring(window.location.search.indexOf('?')+1,);
+            for(let i=0;i<navArr.length;i++){
+                navArr[i].className='';
+                navArr[i].index=i;
+                navArr[i].onclick=function(){
+                    let k= navArr[this.index].getAttribute("id");
+                    console.log(k);
+                    if(k==0){
+                        window.open('index.html?'+k,'_self');
+                    }
+                    if(k==1){
+                        window.open('1.html?'+k,'_self');
+                    }
+                    if(k==2){
+                        window.open('2.html?'+k,'_self');
+                    }
+                    if(k==3){
+                        window.open('3.html?'+k,'_self');
+                    }
+                    if(k==4){
+                        window.open('4.html?'+k,'_self');
+                    }
+                }
+            }
+            navArr[id].className='actived';
+        })
+	</script>
+
+</html>

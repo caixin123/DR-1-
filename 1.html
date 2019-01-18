@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>求婚钻戒</title>
+    <link rel="stylesheet" href="css/1.css">
+</head>
+<body>
+<header id="header"></header>
+<div class="container">
+    <section class="sec-1">
+        <div class="banner">
+            <img src="https://static.darryring.com/images/2018-08-01/15331156655b617d11bf7c5.jpg" alt="">
+            <img src="https://static.darryring.com/images/2018-08-07/15336105335b690a2553495.jpg" alt="">
+            <div class="btn"><span id="btn1"><</span> <span id="btn2">> </span></div>
+            <ul><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>
+            <div class="circle"><i id="ibtn1"></i><i id="ibtn2"></i>  </div>
+        </div>
+    </section>
+    <section class="sec-2">
+        <ul id="nav-list">
+            <li><a href="index.html">D R</a></li> >
+            <li><a href="">求婚钻戒</a></li> >
+            <li><a href="">所有商品</a></li>
+        </ul>
+        <ul id="shop-search">
+            <li>系列<div>
+                <span>MY HEART系列</span><span>LOVE LINE系列</span><span>DR PARIS 52°系列</span>
+            </div></li>
+            <li>重量<div>
+                <span>10分以下</span><span>10分-30分</span><span>30分-50分</span><span>50分-1克拉</span><span>1克拉以上</span>
+            </div></li>
+            <li id="shape">形状<div>
+                <span type-id="heart">心形</span><span type-id="cricle">圆形</span><span type-id="square">方形</span>
+            </div></li>
+            <li>价格<div>
+                <span>5000以下</span><span>5000-10000</span><span>10000-20000</span><span>20000-40000</span><span>40000以上</span>
+            </div></li>
+            <li>排序<div>
+                <span>按人气</span><span>按新品</span><span>按价格</span>
+            </div></li>
+        </ul>
+        <ul id="shop-list">
+            <!--<li>-->
+                <!--<img src="https://static.darryring.com/images/2018-02-08/1518086562.jpg" alt="">-->
+                <!--<h3>￥31219</h3>-->
+                <!--<p>LOVE LINE系列 简奢款 50分 H色</p>-->
+                <!--<div><span>收藏</span><span>立即购买</span></div>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<img src="https://static.darryring.com/images/2017-08-02/1501641872.jpg" alt="">-->
+                <!--<h3>￥31219</h3>-->
+                <!--<p>LOVE LINE系列 简奢款 50分 H色</p>-->
+                <!--<div><span>收藏</span><span>立即购买</span></div>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<img src="https://static.darryring.com/images/2017-11-06/1509964641.jpg" alt="">-->
+                <!--<h3>￥31219</h3>-->
+                <!--<p>LOVE LINE系列 简奢款 50分 H色</p>-->
+                <!--<div><span>收藏</span><span>立即购买</span></div>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<img src="https://static.darryring.com/images/2017-11-03/1509692818.jpg" alt="">-->
+                <!--<h3>￥31219</h3>-->
+                <!--<p>LOVE LINE系列 简奢款 50分 H色</p>-->
+                <!--<div><span>收藏</span><span>立即购买</span></div>-->
+            <!--</li>-->
+        </ul>
+    </section>
+    <section class="sec-li">
+        <ul>
+            <li><img src="img/page1/par-1.png" alt=""><span>钻也认证</span></li>
+            <li><img src="img/page1/par-2.png" alt=""><span>一钻双证</span></li>
+            <li><img src="img/page1/par-3.png" alt=""><span>终生保养</span></li>
+            <li><img src="img/page1/par-4.png" alt=""><span>以小换大</span></li>
+            <li><img src="img/page1/par-5.png" alt=""><span>15天包换</span></li>
+            <li><img src="img/page1/par-6.png" alt=""><span>全国包邮</span></li>
+            <li><img src="img/page1/par-7.png" alt=""><span>全程保养</span></li>
+            <li><img src="img/page1/par-8.png" alt=""><span>会员专享</span></li>
+        </ul>
+    </section>
+    <div class="width-fixed follow">
+        <h4>关注我们</h4>
+        <p>一个让你相信真爱的地方，给你实用的情感指南，为你的爱情终身服务。</p>
+        <img src="img/page1/wechat.png" alt=""><img src="img/page1/weibo.png" alt="">
+    </div>
+</div>
+<footer id="footer"></footer>
+<script src="js/ajax.js"></script>
+<script src="js/font-icon/iconfont.js"></script>
+<script>
+    let oHeader=document.getElementById('header');
+    let oFooter=document.getElementById('footer');
+    var oList=document.getElementById('shop-list');
+    ajax('get','js/diamond.json','',(data)=>{
+       data=JSON.parse(data);
+        data.forEach((item)=>{
+            oList.innerHTML+=`
+             <li id-data=${item.id}>
+                <img src=${item.image} alt="">
+                <h3>￥${item.price}</h3>
+                <p>${item.series} ${item.style} ${item.weight} H色</p>
+                <div><span>收藏</span><span>立即购买</span></div>
+            </li>
+            `
+        })
+        // let shopArr=document.getElementById('shop-list').getElementsByTagName('li');
+        let shapeArr=document.getElementById('shape').getElementsByTagName('span');
+      for(let i=0;i<shapeArr.length;i++){
+                shapeArr[i].index=i;
+                shapeArr[i].onclick=function(){
+                    oList.innerHTML='';
+                    data.forEach(function(item){
+                        if(item.type==shapeArr[i].getAttribute('type-id')){
+                            oList.innerHTML+=`
+             <li id-data=${item.id}>
+                <img src=${item.image} alt="">
+                <h3>￥${item.price}</h3>
+                <p>${item.series} ${item.style} ${item.weight} H色</p>
+                <div><span>收藏</span><span>立即购买</span></div>
+            </li>
+            `
+                        }
+                    })
+                }
+      }
+    })
+    ajax('get','header.html','',(data)=>{
+        oHeader.innerHTML=data;
+    })
+    setTimeout(()=>{
+        ajax('get','footer.html','',(data)=>{
+            oFooter.innerHTML=data;
+        })
+    },5)
+</script>
+<script>
+    var oBanner=document.getElementsByClassName('banner')[0];
+    var oImg=oBanner.getElementsByTagName('img');
+    var oBtn1=document.getElementById("btn1");
+    var oBtn2=document.getElementById("btn2");
+    var iBtn=document.getElementsByClassName('circle')[0].getElementsByTagName('i');
+    var t=0;
+    var iBtn1=document.getElementById("ibtn1");
+    var iBtn2=document.getElementById("ibtn2");
+    iBtn1.onclick=()=>{
+        t=0;
+        iBtn[0].style.opacity=0.3;
+        iBtn[1].style.opacity=0;
+        oImg[0].style.opacity=1;
+        oImg[1].style.opacity=0;
+    }
+    iBtn2.onclick=()=>{
+        t=1;
+        iBtn[0].style.opacity=0;
+        iBtn[1].style.opacity=0.3;
+        oImg[0].style.opacity=0;
+        oImg[1].style.opacity=1;
+    }
+    oBtn1.onclick=slideLeft;
+    oBtn2.onclick=slideRight;
+    iBtn[0].style.opacity=0.3;
+    oImg[0].style.opacity=1;
+    oImg[1].style.opacity=0;
+    var time=setInterval(slideRight,4000);
+    oBanner.onmouseover=()=>{
+        // console.log(1);
+        oBtn1.style.opacity=0.2;
+        oBtn2.style.opacity=0.2;
+        clearInterval(time);
+    }
+    oBanner.onmouseout=()=>{
+        // console.log(2);
+        oBtn1.style.opacity=0;
+        oBtn2.style.opacity=0;
+        time=setInterval(slideRight,4000);
+    }
+    function slideLeft(){
+        t=t-1;
+        if(t<0){
+            t=oImg.length-1;
+        }
+
+        for(let i=0;i<oImg.length;i++){
+            oImg[i].style.opacity=0;
+            iBtn[i].style.opacity=0;
+        }
+        iBtn[t].style.opacity=0.3
+        oImg[t].style.opacity=1;
+    }
+    function slideRight(){
+        t=t+1;
+        if(t>oImg.length-1){
+            t=0;
+        }
+        for(let i=0;i<oImg.length;i++){
+            oImg[i].style.opacity=0;
+            iBtn[i].style.opacity=0;
+        }
+        iBtn[t].style.opacity=0.3
+        oImg[t].style.opacity=1;
+    }
+</script>
+<script>
+    ajax('get','header.html','',(data)=>{
+        oHeader.innerHTML=data;
+        let navArr=document.getElementsByTagName('nav')[0].getElementsByTagName('li');
+        // console.log(navArr);
+        let id=window.location.search.substring(window.location.search.indexOf('?')+1,);
+        for(let i=0;i<navArr.length;i++){
+            navArr[i].className='';
+            navArr[i].index=i;
+            navArr[i].onclick=function(){
+                let k= navArr[this.index].getAttribute("id");
+                console.log(k);
+                if(k==0){
+                    window.open('index.html?'+k,'_self');
+                }
+                if(k==1){
+                    window.open('1.html?'+k,'_self');
+                }
+                if(k==2){
+                    window.open('2.html?'+k,'_self');
+                }
+                if(k==3){
+                    window.open('3.html?'+k,'_self');
+                }
+                if(k==4){
+                    window.open('4.html?'+k,'_self');
+                }
+            }
+        }
+        navArr[id].className='actived';
+    })
+</script>
+</body>
+</html>
